@@ -1,5 +1,5 @@
 ---
-title: "theCLE"
+title: "theCLT"
 author: "Tanya Claros"
 date: 'Summer 2022'
 output: html_document
@@ -33,7 +33,7 @@ densityplot(x.avg,main="sample size 2")
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
- 
+It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks are not the same, middle peak is the largest.   
 
 Do this again for 4 random samples
 
