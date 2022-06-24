@@ -28,12 +28,17 @@ numb = 2
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
+x.std <- apply(mdata,1,sd)
+KKmean = mean(x.avg)
+KKstd = sd(x.std)
 densityplot(x.avg,main="sample size 2")
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks are not the same, middle peak is the largest.   
+It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks are not the same, middle peak is the largest.  
+
+For this data mean = `r KKmean`, std = `r KKstd`
 
 Do this again for 4 random samples
 
@@ -42,10 +47,15 @@ numb = 4
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+x.std <- apply(mdata,1,sd)
+KKmean = mean(x.avg)
+KKstd = sd(x.std)
+densityplot(x.avg,main="sample size 4")
 ```
   
-It appears to me that the result plot is  
+It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks are not the same, middle peak is slightly larger than the other two.     
+
+For this data mean = `r KKmean`, std = `r KKstd`
 
 Then again for 9 random samples
 
@@ -54,10 +64,15 @@ numb = 9
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+x.std <- apply(mdata,1,sd)
+KKmean = mean(x.avg)
+KKstd = sd(x.std)
+densityplot(x.avg,main="sample size 9")
 ```
   
-It appears to me that the result plot is  
+It appears to me that the result plot is unimodal. It only has one peak.  
+
+For this data mean = `r KKmean`, std = `r KKstd`
   
 then 16 random samples
 
@@ -66,10 +81,15 @@ numb = 16
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+x.std <- apply(mdata,1,sd)
+KKmean = mean(x.avg)
+KKstd = sd(x.std)
+densityplot(x.avg,main="sample size 16")
 ```
   
-It appears to me that the result plot is  
+It appears to me that the result plot is unimodal. It only has one peak.  
+
+For this data mean = `r KKmean`, std = `r KKstd`
   
 finally for 36 random samples.
 
@@ -78,16 +98,19 @@ numb = 36
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+x.std <- apply(mdata,1,sd)
+KKmean = mean(x.avg)
+KKstd = sd(x.std)
+densityplot(x.avg,main="sample size 36")
 ```
   
-It appears to me that the result plot is 
+It appears to me that the result plot is unimodal. It only has one peak.  
 
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
-
- 
+  
+The middle of the graph where the peak is seems to be more heavily populated then the outsides of the graph. The population date seems to be more centralized as the sample size grew. The mean stays the same because the additional data evens itself out and the standard deviation gets smaller because the increased sample size makes the results more accurate.
 
 Then submit the link to your github project  to canvas to complete this assignment.
