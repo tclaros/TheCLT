@@ -37,11 +37,52 @@ It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks
 
 Do this again for 4 random samples
 
+```{r}
+numb = 4
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
+  
+It appears to me that the result plot is  
+
 Then again for 9 random samples
 
+```{r}
+numb = 9
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
+  
+It appears to me that the result plot is  
+  
 then 16 random samples
 
+```{r}
+numb = 16
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
+  
+It appears to me that the result plot is  
+  
 finally for 36 random samples.
+
+```{r}
+numb = 36
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
+  
+It appears to me that the result plot is 
+
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
