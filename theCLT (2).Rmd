@@ -16,10 +16,14 @@ data("imagpop")
 KK_data <- imagpop$kkardashtemp
 my1000 <- sample(KK_data, size = 1000, replace=T)
 densityplot(my1000,main="original data")
+print(mean(KK_data))
+print(sd(KK_data))
 
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
+
+It appears to me that the result plot is bimodal. It has 2 peaks. Both peaks appear to be the same size. The mean is 50 and the standard deviation is 41.7.  
 
 Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
 
@@ -30,13 +34,13 @@ mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 x.std <- apply(mdata,1,sd)
 KKmean = mean(x.avg)
-KKstd = sd(x.std)
+KKstd = sd(x.avg)
 densityplot(x.avg,main="sample size 2")
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks are not the same, middle peak is the largest.  
+It appears to me that the result plot is trimodal. It has 3 peaks. All the peaks are not the same, middle peak is the largest with the other two peaks about the same size.  
 
 For this data mean = `r KKmean`, std = `r KKstd`
 
@@ -49,7 +53,7 @@ mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 x.std <- apply(mdata,1,sd)
 KKmean = mean(x.avg)
-KKstd = sd(x.std)
+KKstd = sd(x.avg)
 densityplot(x.avg,main="sample size 4")
 ```
   
@@ -66,7 +70,7 @@ mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 x.std <- apply(mdata,1,sd)
 KKmean = mean(x.avg)
-KKstd = sd(x.std)
+KKstd = sd(x.avg)
 densityplot(x.avg,main="sample size 9")
 ```
   
@@ -83,7 +87,7 @@ mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 x.std <- apply(mdata,1,sd)
 KKmean = mean(x.avg)
-KKstd = sd(x.std)
+KKstd = sd(x.avg)
 densityplot(x.avg,main="sample size 16")
 ```
   
@@ -100,17 +104,18 @@ mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 x.std <- apply(mdata,1,sd)
 KKmean = mean(x.avg)
-KKstd = sd(x.std)
+KKstd = sd(x.avg)
 densityplot(x.avg,main="sample size 36")
 ```
   
 It appears to me that the result plot is unimodal. It only has one peak.  
 
+For this data mean = `r KKmean`, std = `r KKstd`
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
   
-The middle of the graph where the peak is seems to be more heavily populated then the outsides of the graph. The population date seems to be more centralized as the sample size grew. The mean stays the same because the additional data evens itself out and the standard deviation gets smaller because the increased sample size makes the results more accurate.
+The middle of the graph where the peak is seems to be more heavily populated then the outsides of the graph. The population date seems to be more centralized as the sample size grew. The mean stays the same. Original sample size has a mean of 50 and standard deviation of 41.7. Sample size 2 was a trimodal with mean of 50 and standard deviation on 29.1. Sample size 4 was also a trimodal with the mean of 50 and standard deviation of 21.2. Sample size 9 was unimodal with mean of 50 and standard deviation of 13. Sample size 16 was unimodal with the mean of 50 and standard deviation on 10.8. Finally sample size 36 was unimodal with a mean of 50 and standard deviation of 6.9. 
 
 Then submit the link to your github project  to canvas to complete this assignment.
